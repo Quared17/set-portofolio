@@ -13,7 +13,7 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		height: 12vh;
+		height: 75px;
 		padding: 0 10%;
 		background-color: white;
 		box-shadow: 1px 1px 3px #ddd;
@@ -36,7 +36,7 @@
 	.container-nav-link a{
 		width: auto;
 		height: auto;
-		padding: 13px 20px;
+		padding: 11px 20px;
 		border-radius: 3px;
 		text-decoration: none;
 		color: #b2bec3;
@@ -161,6 +161,23 @@
 		font-size: 1.2em;
 		letter-spacing: 1px;
 		color: gray;
+
+	}
+
+	.container-logo-skill{
+		width: 80px;
+		height: 80px;
+		/*background-color: whitesmoke;*/
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	.container-logo-skill img{
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		/*border: 1px solid #ddd;*/
 	}
 
 	#Portofolio{
