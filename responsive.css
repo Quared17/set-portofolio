@@ -1,0 +1,45 @@
+
+@media screen and (max-width: 1200px){
+	#logo{
+		color: steelblue;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	#logo{
+		color: dimgray;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

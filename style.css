@@ -1,0 +1,211 @@
+
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+	}
+
+	#container-navbar{
+		position: fixed;
+		z-index: 99;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 12vh;
+		padding: 0 10%;
+		background-color: white;
+		box-shadow: 1px 1px 3px #ddd;
+	}
+
+	#logo{
+		font-size: 1.9em;
+		color: #ff7675;
+		/*letter-spacing: 1px;*/
+	}
+
+	.container-nav-link{
+		display: flex;
+		width: 50%;
+		justify-content: center;
+		align-items: center;
+		/*background-color: whitesmoke;*/
+	}
+
+	.container-nav-link a{
+		width: auto;
+		height: auto;
+		padding: 13px 20px;
+		border-radius: 3px;
+		text-decoration: none;
+		color: #b2bec3;
+		font-size: 1em;
+		letter-spacing: 1px;
+		/*font-weight: 600;*/
+		transition-duration: 0.4s;
+	}
+
+	.container-nav-link a:hover{
+		cursor: pointer;
+		color: dimgray;
+		background-color: whitesmoke;
+	}
+
+	.container-nav-link a.active{
+		background-color: #ff7675;
+		color: white;
+		cursor: pointer;
+	}
+
+	.container-content{
+		display: inline-block;
+		float: left;
+		width: 100%;
+		height: 100vh;
+		padding: 0 0 50px;
+		background-color: whitesmoke;
+	}
+
+	#skill-section{
+		height: auto;
+		background-color: #55efc4;
+		background-color: whitesmoke;
+	}
+
+	.container-title-section{
+		display: inline-block;
+		float: left;
+		width: 100%;
+		height: auto;
+		margin-top: 6vh;
+		margin-bottom: 6vh;
+		text-align: center;
+		letter-spacing: 2px;
+		font-size: 1.8em;
+		color: dimgray;
+	}
+
+	.container-grid{
+		display: grid;
+		width: 80%;
+		height: auto;
+		/*padding: 10px;*/
+		padding: 20px 0;
+		margin: 0 auto;
+		border-radius: 5px;
+		/*background-color: white;*/
+		grid-template-columns: repeat(auto-fill, 150px);
+		grid-auto-rows: 150px;
+		grid-gap: 40px;
+		place-content: space-evenly;
+		/*grid-gap: 40px;*/
+	/*	place-content: space-evenly;*/
+		/*place-items: center;*/
+	}
+
+	.list-skill-item{
+		display: grid;
+		place-content: center;
+		grid-row-gap: 15px;
+		background-color: white;
+		border: 1px solid whitesmoke;
+		border-radius: 5px;
+		box-shadow: 3px 3px 6px #ddd;
+		text-align: center;
+	}
+
+
+	.list-skill-item i{
+		font-size: 5em;
+	}
+
+	.list-skill-item i.item-html{
+		color: steelblue;
+	}
+
+	.list-skill-item i.item-css{
+		color: tomato;
+	}
+
+	.list-skill-item i.item-boostrap{
+		color: #a55eea;
+	}
+
+	.list-skill-item i.item-javascript{
+		color: #ffd32a;
+	}
+
+	.list-skill-item i.item-php{
+		color: steelblue;
+	}
+
+	.list-skill-item i.item-laravel{
+		color: #fc5c65;
+	}
+
+	.list-skill-item i.item-wordpress{
+		color: steelblue;
+	}
+
+	.list-skill-item i.item-figma{
+		color: lightblue;
+	}
+
+	.list-skill-item i.item-github{
+		color: black;
+	}
+
+	.list-skill-item h3{
+		/*background-color: steelblue;*/
+		font-size: 1.2em;
+		letter-spacing: 1px;
+		color: gray;
+	}
+
+	#Portofolio{
+		background-color: whitesmoke;
+	}
+
+	#Contact{
+		background-color: white;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
