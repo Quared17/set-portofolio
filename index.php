@@ -1,3 +1,36 @@
+<?php
+
+	$list_nav_link = [
+						[
+							'title' => 'About',
+							'target' => 'about-section'
+						],
+
+						[
+							'title' => 'My Skill',
+							'target' => 'skill-section'
+						],
+
+						[
+							'title' => 'My Portofolio',
+							'target' => 'portofolio-section'
+						],
+
+						[
+							'title' => 'Contact Me',
+							'target' => 'contact-section'
+						]
+					 ];
+
+	if (isset($_GET['active-section'])){
+		$active_section = $_GET['active-section'];
+	}
+
+	else {
+		$active_section = 'About';
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,10 +48,20 @@
 		</h2>
 
 		<div class="container-nav-link">
-			<a class="nav-link" href="#about-section"> About </a>
-			<a class="nav-link" href="#skill-section"> My Skill </a>
-			<a class="nav-link" href="#ortofolio-section"> My Portofolio </a>
-			<a class="nav-link active" href="#contact-section"> Contact Me </a>
+			<?php foreach ($list_nav_link as $nav_link) : ?>
+				<?php $title = $nav_link['title']; ?>
+
+				<?php if ($active_section === $title) : ?>
+					<a class="active" href="?active-section=<?= $nav_link['title']; ?>#<?= $nav_link['target']; ?>"> 	
+						<?= $nav_link['title']; ?> 
+					</a>
+
+				<?php else : ?>
+					<a href="?active-section=<?= $nav_link['title']; ?>#<?= $nav_link['target']; ?>"> 	
+						<?= $nav_link['title']; ?> 
+					</a>
+				<?php endif; ?>
+			<?php endforeach; ?>
 		</div>
 	</div>
 
@@ -31,125 +74,37 @@
 
 		<div class="container-grid">
 			<div class="list-skill-item"> 
-				<i class="fab fa-html5 item-html"></i>
+				<div class="container-logo-skill">
+					<img src="Image/test.png">
+				</div>
+				<!-- <i class="fab fa-html5 item-html"></i> -->
 
 				<h3> HTML 5 </h3>
 			</div>
 
 			<div class="list-skill-item">
-				<i class="fab fa-css3-alt item-css"></i>
-
-				<h3> CSS 3 </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-php item-php"></i>
-
-				<h3> PHP </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-js-square item-javascript"></i>
-
-				<h3> Javascript </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-github-alt item-github"></i>
-
-				<h3> Git | Github </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-bootstrap item-boostrap"></i>
-
-				<h3> Boostrap </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-laravel item-laravel"></i>
-
-				<h3> Laravel </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-wordpress item-wordpress"></i>
-
-				<h3> Wordpress </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-figma item-figma"></i>
-
-				<h3> Figma </h3>
-			</div>
-
-		</div>
-
-		<!-- <div class="container-grid">
-			<div class="list-skill-item">
-				<i class="fab fa-html5 item-html"></i>
-
-				<h3> HTML 5 </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-css3-alt item-css"></i>
+				<div class="container-logo-skill">
+					<img src="Image/css.png">
+				</div>
+				<!-- <i class="fab fa-css3-alt item-css"></i> -->
 
 				<h3> CSS 3 </h3>
 			</div>
 
 			<div class="list-skill-item">
 				<div class="container-logo-skill">
-					<img src="Image/grid.png">
+					<img src="Image/php.png">
 				</div>
-
-				<h3> Grid | Flexbox </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-bootstrap item-boostrap"></i>
-
-				<h3> Boostrap </h3>
-			</div>
-
-			<div class="list-skill-item">
-
-				<h3> UI | UX </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-js-square item-javascript"></i>
-
-				<h3> Javascript </h3>
-			</div>
-
-			<div class="list-skill-item">
-				
-
-				<h3> Jquery </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-php item-php"></i>
 
 				<h3> PHP </h3>
 			</div>
 
 			<div class="list-skill-item">
+				<div class="container-logo-skill">
+					<img src="Image/sql.png">
+				</div>
 
-				<h3> OOP PHP </h3>
-			</div>
-
-			<div class="list-skill-item">
-
-				<h3> MVC PHP </h3>
-			</div>
-
-			<div class="list-skill-item">
-				<i class="fab fa-laravel item-laravel"></i>
-
-				<h3> Laravel </h3>
+				<h3> MySQL </h3>
 			</div>
 
 			<div class="list-skill-item">
@@ -162,25 +117,91 @@
 
 			<div class="list-skill-item">
 				<div class="container-logo-skill">
-					<img src="Image/mysql.png">
+					<img src="Image/javascript.png">
 				</div>
+				<!-- <i class="fab fa-js-square item-javascript"></i> -->
 
-				<h3> MySQL </h3>
+				<h3> Javascript </h3>
 			</div>
 
 			<div class="list-skill-item">
-				<i class="fas fa-search"></i>
+				<div class="container-logo-skill">
+					<img src="Image/jquery.png">
+				</div>
+				<!-- <i class="fab fa-js-square item-javascript"></i> -->
+
+				<h3> Jquery </h3>
+			</div>
+
+			<div class="list-skill-item">
+				<div class="container-logo-skill">
+					<img src="Image/git.png">
+				</div>
+				<!-- <i class="fab fa-js-square item-javascript"></i> -->
+
+				<h3> Git </h3>
+			</div>
+
+			<div class="list-skill-item">
+				<div class="container-logo-skill">
+					<img src="Image/github.png">
+				</div>
+				<!-- <i class="fab fa-js-square item-javascript"></i> -->
+
+				<h3> Github </h3>
+			</div>
+
+			<div class="list-skill-item">
+				<div class="container-logo-skill">
+					<img src="Image/seo.png">
+				</div>
+				<!-- <i class="fab fa-laravel item-laravel"></i> -->
 
 				<h3> SEO </h3>
 			</div>
 
 			<div class="list-skill-item">
-				<i class="fab fa-github-alt item-github"></i>
+				<div class="container-logo-skill">
+					<img src="Image/figma.png">
+				</div>
+				<!-- <i class="fab fa-laravel item-laravel"></i> -->
 
-				<h3> Git | Github </h3>
+				<h3> Figma </h3>
 			</div>
-		</div> -->
 
+			<div class="list-skill-item">
+				<i class="fab fa-bootstrap item-boostrap"></i>
+
+				<h3> Boostrap </h3>
+			</div>
+
+			<div class="list-skill-item">
+				<div class="container-logo-skill">
+					<img src="Image/laravel.png">
+				</div>
+				<!-- <i class="fab fa-laravel item-laravel"></i> -->
+
+				<h3> Laravel </h3>
+			</div>
+
+			<div class="list-skill-item">
+				<div class="container-logo-skill">
+					<img src="Image/codeIgniter.png">
+				</div>
+				<!-- <i class="fab fa-js-square item-javascript"></i> -->
+
+				<h3> CodeIgniter </h3>
+			</div>
+
+			<div class="list-skill-item">
+				<div class="container-logo-skill">
+					<img src="Image/wordpress.png">
+				</div>
+				<!-- <i class="fab fa-laravel item-laravel"></i> -->
+
+				<h3> Wordpress </h3>
+			</div>
+		</div>
 	</div>
 
 	<div class="container-content" id="portofolio-section"> </div>
