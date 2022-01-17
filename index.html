@@ -1,35 +1,4 @@
-<?php
 
-	$list_nav_link = [
-						[
-							'title' => 'About',
-							'target' => 'about-section'
-						],
-
-						[
-							'title' => 'My Skill',
-							'target' => 'skill-section'
-						],
-
-						[
-							'title' => 'My Portofolio',
-							'target' => 'portofolio-section'
-						],
-
-						[
-							'title' => 'Contact Me',
-							'target' => 'contact-section'
-						]
-					 ];
-
-	if (isset($_GET['active-section'])){
-		$active_section = $_GET['active-section'];
-	}
-
-	else {
-		$active_section = 'About';
-	}
-?>
 
 <!DOCTYPE html>
 <html>
@@ -48,20 +17,10 @@
 		</h2>
 
 		<div class="container-nav-link">
-			<?php foreach ($list_nav_link as $nav_link) : ?>
-				<?php $title = $nav_link['title']; ?>
-
-				<?php if ($active_section === $title) : ?>
-					<a class="active" href="?active-section=<?= $nav_link['title']; ?>#<?= $nav_link['target']; ?>"> 	
-						<?= $nav_link['title']; ?> 
-					</a>
-
-				<?php else : ?>
-					<a href="?active-section=<?= $nav_link['title']; ?>#<?= $nav_link['target']; ?>"> 	
-						<?= $nav_link['title']; ?> 
-					</a>
-				<?php endif; ?>
-			<?php endforeach; ?>
+			<a href="#about-section"> About </a>
+			<a class="active" href="#skill-section"> My Skill </a>
+			<a href="#portofolio-section"> My Portofolio </a>
+			<a href="#contact-section"> Contact Me </a>
 		</div>
 	</div>
 
@@ -120,7 +79,7 @@
 					<img src="Image/javascript.png">
 				</div>
 
-				<h3> Java </h3>
+				<h3> Javascript </h3>
 			</div>
 
 			<div class="list-skill-item">
@@ -189,7 +148,7 @@
 				</div>
 				<!-- <i class="fab fa-js-square item-javascript"></i> -->
 
-				<h3> Code </h3>
+				<h3> Code Igniter </h3>
 			</div>
 
 			<div class="list-skill-item">
@@ -198,7 +157,7 @@
 				</div>
 				<!-- <i class="fab fa-laravel item-laravel"></i> -->
 
-				<h3> Wordpressaaaaaaaa </h3>
+				<h3> Wordpress </h3>
 			</div>
 		</div>
 	</div>
