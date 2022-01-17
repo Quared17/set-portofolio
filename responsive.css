@@ -1,15 +1,56 @@
 
+@media screen and (min-width: 1200px){
+
+}
+
 @media screen and (max-width: 1200px){
-	#logo{
-		color: steelblue;
+	
+}
+
+@media screen and (max-width: 992px){
+	
+}
+
+@media screen and (max-width: 768px){
+	
+}
+
+@media screen and (max-width: 576px){
+	#container-navbar{
+		padding: 0 8%;
+	}
+
+	.container-nav-link{
+		display: none;
+	}
+
+	.container-grid{
+		width: 85%;
+		/*background-color: teal;*/
+		grid-template-columns: repeat(auto-fill, 130px);
+		grid-auto-rows: 130px;
+		place-content: center;
+		grid-gap: 30px;
+	}
+
+	.list-skill-item h3{
+		font-size: 1em;
+		background-color: steelblue;
+	}
+
+	.container-logo-skill{
+		background-color: whitesmoke;
+		width: 60px;
+		height: 60px;
 	}
 }
 
-@media only screen and (max-width: 576px) {
-	#logo{
-		color: dimgray;
-	}
-}
+
+
+
+
+
+
 
 
 
