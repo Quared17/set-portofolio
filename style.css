@@ -20,9 +20,13 @@
 	}
 
 	#logo{
-		font-size: 1.9em;
+		font-size: 1.7em;
 		color: #ff7675;
 		/*letter-spacing: 1px;*/
+	}
+
+	.btn-responsive-nav-link{
+		display: none;
 	}
 
 	.container-nav-link{
@@ -40,7 +44,7 @@
 		border-radius: 3px;
 		text-decoration: none;
 		color: #b2bec3;
-		font-size: 1em;
+		font-size: 0.9em;
 		letter-spacing: 1px;
 		/*font-weight: 600;*/
 		transition-duration: 0.4s;
@@ -77,19 +81,23 @@
 		height: auto;
 		background-color: #55efc4;
 		background-color: whitesmoke;
+		text-align: center;
 	}
 
 	.container-title-section{
 		display: inline-block;
-		float: left;
-		width: 100%;
+		width: auto;
 		height: auto;
-		margin-top: 6vh;
-		margin-bottom: 6vh;
+		padding-bottom: 3px;
+		margin-top: 8vh;
+		margin-bottom: 3vh;
+		/*border-bottom: 3px solid steelblue;*/
 		text-align: center;
-		letter-spacing: 2px;
-		font-size: 1.8em;
-		color: dimgray;
+		font-size: 1.3em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: gray;
 	}
 
 	.container-grid{
@@ -101,10 +109,10 @@
 		margin: 0 auto;
 		border-radius: 5px;
 		/*background-color: white;*/
-		grid-template-columns: repeat(auto-fill, 150px);
-		grid-auto-rows: 150px;
-		grid-gap: 40px;
-		place-content: center;
+		grid-template-columns: repeat(auto-fill, 130px);
+		grid-auto-rows: 130px;
+		grid-gap: 30px;
+		place-content: space-between;
 		/*grid-gap: 40px;*/
 	/*	place-content: space-evenly;*/
 		/*place-items: center;*/
@@ -112,13 +120,18 @@
 
 	.list-skill-item{
 		display: grid;
-		place-content: center;
 		grid-row-gap: 15px;
+		align-content: center;
 		background-color: white;
-		border: 1px solid whitesmoke;
+		border: 1px solid #ddd;
 		border-radius: 5px;
 		box-shadow: 3px 3px 6px #ddd;
 		text-align: center;
+		transition-duration: 0.3s;
+	}
+
+	.list-skill-item:hover{
+		transform: scale(1.1);
 	}
 
 
@@ -163,17 +176,20 @@
 	}
 
 	.list-skill-item h3{
-		display: inline-block;
+		display: grid;
+		/*place-items: start center;*/
+		width: auto;
+		height: auto;
+		font-size: 1em;
+		color: dimgray;
 		/*background-color: steelblue;*/
-		font-size: 1.2em;
-		letter-spacing: 1px;
-		color: gray;
-
 	}
 
 	.container-logo-skill{
-		width: 80px;
-		height: 80px;
+		display: grid;
+		width: 60px;
+		height: 60px;
+		margin: auto;
 		/*background-color: whitesmoke;*/
 		border-radius: 5px;
 		overflow: hidden;
@@ -189,6 +205,7 @@
 
 	#portofolio-section{
 		background-color: white;
+		text-align: center;
 	}
 
 	#container-portofolio-content{
@@ -198,12 +215,13 @@
 		place-content: space-between;
 		width: 100%;
 		height: auto;
-		/*background-color: whitesmoke;*/
+		margin-top: 4vh;
+		/*background-color: #ddd;*/
 	}
 
 	.container-list-portofolio{
 		display: inline-block;
-		width: 30%;
+		width: 45%;
 		height: auto;
 		/*margin-right: 10px;*/
 		margin-bottom: 30px;
@@ -212,14 +230,31 @@
 		border-radius: 5px 5px;
 	}
 
+	.sub-container-list-portofolio{
+		display: inline-block;
+		width: auto;
+		height: auto;
+		box-shadow: 3px 3px 8px #ddd;
+		border-radius: 5px;
+	}
+
 	.container-image-portofolio{
 		display: inline-block;
 		float: left;
 		width: 100%;
-		height: 150px;
-		border-radius: 5px 5px 0 0;
+		height: 300px;
+		padding: 10px;
 		background-color: #74b9ff;
+		border-radius: 5px 5px 0 0;
 		/*box-shadow: 3px 0px 8px #ddd;*/
+	}
+
+	.container-image-portofolio img{
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		background-position: center;
+		background-size: cover;
 	}
 
 	.container-info-uploaded-portofolio{
@@ -228,7 +263,7 @@
 		width: 100%;
 		height: 40px;
 		padding: 0 20px;
-		background-color: whitesmoke;
+		background-color: #74b9ff;
 		color: dimgray;
 		font-size: 12px;
 		/*box-shadow: 3px 0px 8px #ddd;*/
@@ -251,18 +286,18 @@
 		float: left;
 		width: 100%;
 		height: auto;
+		margin-top: 10px;
 		padding: 10px 20px 20px;
-		/*background-color: tomato;*/
+		background-color: white;
 		border-radius: 0 0 5px 5px;
-		border: 1px solid whitesmoke;
-		box-shadow: 3px 3px 8px #ddd;
+		/*border: 1px solid whitesmoke;*/
 	}
 
 	.title-project-portofolio{
 		width: 100%;
 		height: auto;
 		padding: 10px 0px 3px;
-		font-size: 22px;
+		font-size: 1.3em;
 		color: dimgray;
 		letter-spacing: 1px;
 	}
@@ -272,18 +307,21 @@
 		float: left;
 		width: 100%;
 		height: auto;
-		text-align: justify;
-		font-size: 15px;
+		/*text-align: justify;*/
+		font-size: 0.9em;
+		/*letter-spacing: 1px;*/
 		line-height: 20px;
 		color: dimgray;
 	}
 
 	.container-tag-category{
 		display: inline-block;
-		float: 100%;
+		float: left;
+		width: 100%;
 		height: auto;
-		margin-top: 30px;
-		b/*ackground-color: whitesmoke;*/
+		padding: 0 8px 0 18px;
+		margin-top: 50px;
+		/*background-color: #74b9ff;*/
 	}
 
 	.tag-category-portofolio{
@@ -304,32 +342,38 @@
 
 	.html5{
 		border: 1px solid tomato;
-		color: tomato;
+		background-color: tomato;
+		color: white;
 	}
 
 	.css3{
 		border: 1px solid steelblue;
-		color: steelblue;
+		background-color: steelblue;
+		color: white;
 	}
 
 	.javascript{
 		border: 1px solid #fbc531;
-		color: #fbc531;
+		background-color: #fbc531;
+		color: white;
 	}
 
 	.jquery{
 		border: 1px solid #1abc9c;
-		color:  #1abc9c;
+		background-color:  #1abc9c;
+		color: white;
 	}
 
 	.php{
 		border: 1px solid #7f8c8d;
-		color:  #7f8c8d;
+		background-color:  #7f8c8d;
+		color: white;
 	}
 
 	.mysql{
 		border: 1px solid #95a5a6;
-		color:  #95a5a6;
+		background-color:  #95a5a6;
+		color: white;
 	}
 
 	#contact-section{
