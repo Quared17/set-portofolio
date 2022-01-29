@@ -17,14 +17,48 @@
 		</h2>
 
 		<div class="container-nav-link">
-			<a href="#about-section"> About </a>
-			<a class="active" href="#skill-section"> My Skill </a>
+			<a class="active" href="#about-section"> About </a>
+			<a href="#skill-section"> My Skill </a>
 			<a href="#portofolio-section"> My Portofolio </a>
 			<a href="#contact-section"> Contact Me </a>
 		</div>
 
 		<div class="btn-responsive-nav-link">
 			<i class="fas fa-bars"></i>
+		</div>
+	</div>
+
+	<div class="container-shadow"></div>
+
+	<div id="container-responsive-nav-link">
+		<div id="container-title-responsive-nav-link">
+			<h3> Nav-Link </h3>
+
+			<div class="container-close-nav-link">
+				<i class="fas fa-times"></i>
+			</div>
+		</div>
+
+		<div class="container-list-nav-link">
+			<a href="#about-section"> 
+				<i class="fas fa-address-card"></i> 
+				About Me
+			</a>
+
+			<a href="#skill-section"> 
+				<i class="fas fa-code"></i>  
+				My Skill
+			</a>
+
+			<a href="#portofolio-section"> 
+				<i class="fas fa-file-code"></i> 
+				My Portofolio
+			</a>
+
+			<a href="#contact-section"> 
+				<i class="fas fa-envelope"></i> 
+				My Contact
+			</a>
 		</div>
 	</div>
 	
@@ -178,7 +212,7 @@
 			<div class="container-list-portofolio">
 				<div class="sub-container-list-portofolio">
 					<div class="container-image-portofolio"> 
-						<img src="Image/portofolio-6.JPG"/>
+						<!-- <img src="Image/portofolio-6.JPG"/> -->
 					</div>
 
 					<!-- <div class="container-info-uploaded-portofolio"> 
@@ -208,7 +242,7 @@
 			<div class="container-list-portofolio">
 				<div class="sub-container-list-portofolio">
 					<div class="container-image-portofolio"> 
-						<img src="Image/portofolio-7.JPG"/>
+						<!-- <img src="Image/portofolio-7.JPG"/> -->
 					</div>
 
 					<!-- <div class="container-info-uploaded-portofolio"> </div> -->
@@ -237,7 +271,7 @@
 			<div class="container-list-portofolio">
 				<div class="sub-container-list-portofolio">
 					<div class="container-image-portofolio"> 
-						<img src="Image/portofolio-2.JPG"/>
+						<!-- <img src="Image/portofolio-2.JPG"/> -->
 					</div>
 
 					<!-- <div class="container-info-uploaded-portofolio"> </div> -->
@@ -266,7 +300,7 @@
 			<div class="container-list-portofolio">
 				<div class="sub-container-list-portofolio">
 					<div class="container-image-portofolio"> 
-						<img src="Image/portofolio-3.JPG"/>
+						<!-- <img src="Image/portofolio-3.JPG"/> -->
 					</div>
 
 					<!-- <div class="container-info-uploaded-portofolio"> </div> -->
@@ -297,7 +331,7 @@
 			<div class="container-list-portofolio">
 				<div class="sub-container-list-portofolio">
 					<div class="container-image-portofolio"> 
-						<img src="Image/portofolio-4.JPG"/>
+						<!-- <img src="Image/portofolio-4.JPG"/> -->
 					</div>
 
 					<!-- <div class="container-info-uploaded-portofolio"> </div> -->
@@ -328,7 +362,7 @@
 			<div class="container-list-portofolio">
 				<div class="sub-container-list-portofolio">
 					<div class="container-image-portofolio"> 
-						<img src="Image/portofolio-5.JPG"/>
+						<!-- <img src="Image/portofolio-5.JPG"/> -->
 					</div>
 
 					<!-- <div class="container-info-uploaded-portofolio"> </div> -->
@@ -361,11 +395,27 @@
 	<div class="container-content" id="contact-section"> </div>
 
 	<script type="text/javascript">
-		// $(document).ready(function(){
-		// 	$('.nav-link').click(function(){
-		// 		$('.nav-link').siblings('active');
-		// 	})
-		// });
+		$(document).ready(function(){
+			$('.container-nav-link a').click(function(){
+				$('.container-nav-link a').removeClass('active');
+				$(this).addClass('active');
+			});
+
+			$('.btn-responsive-nav-link i').click(function(){
+				$('.container-shadow').addClass('active');
+				$('#container-responsive-nav-link').addClass('active');
+			});
+
+			$('.container-close-nav-link i').click(function(){
+				$('.container-shadow').removeClass('active');
+				$('#container-responsive-nav-link').removeClass('active');
+			});
+
+			$('.container-list-nav-link a').click(function(){
+				$('.container-shadow').removeClass('active');
+				$('#container-responsive-nav-link').removeClass('active');
+			});
+		});
 	</script>
 </body>
 </html>
